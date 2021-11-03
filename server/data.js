@@ -44,13 +44,14 @@ exports.getArtistByArtistId = (artistId) => {
 
 exports.addArtist = (data) => {
   const artistId = newArtistId();
-  artist[artistId] = data;
-  return artist[artistId];
+  data.artistId = artistId;
+  artists[artistId] = data;
+  return artists[artistId];
 };
 
 exports.editArtistByArtistId = (artistId, data) => {
   artists[artistId] = {
-    ...artist[artistId],
+    ...artists[artistId],
     ...data
   };
   return artists[artistId];
@@ -100,15 +101,16 @@ exports.getAlbumByAlbumId = (albumId) => {
 exports.addAlbumByArtistId = (artistId, data) => {
   const albumId = newAlbumId();
   albums[albumId] = {
-    artistId,
-    ...data
+    albumId,
+    ...data,
+    artistId
   };
   return albums[albumId];
 };
 
 exports.editAlbumByAlbumId = (albumId, data) => {
   albums[albumId] = {
-    ...album[albumId],
+    ...albums[albumId],
     ...data
   };
   return albums[albumId];
@@ -165,18 +167,19 @@ exports.getSongBySongId = (songId) => {
   return song;
 };
 
-exports.addSongByAlbumId = (albumId) => {
+exports.addSongByAlbumId = (albumId, data) => {
   const songId = newSongId();
   songs[songId] = {
     songId,
-    ...data
+    ...data,
+    albumId
   };
   return songs[songId];
 };
 
 exports.editSongBySongId = (songId, data) => {
   songs[songId] = {
-    ...song[songId],
+    ...songs[songId],
     ...data
   };
   return songs[songId];

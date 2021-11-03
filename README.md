@@ -594,7 +594,8 @@ Request components:
   {
     "name": "Dani California",
     "trackNumber": 1,
-    "lyrics": "..."
+    "lyrics": "...",
+    "albumId": 1
   }
   ```
 
