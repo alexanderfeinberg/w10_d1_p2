@@ -24,7 +24,7 @@ function newSongId() {
 }
 
 exports.getAllArtists = () => {
-  return artists;
+  return Object.values(artists);
 };
 
 exports.getLatestArtist = () => {
