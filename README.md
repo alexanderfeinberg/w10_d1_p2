@@ -140,7 +140,7 @@ Request components:
 Response components:
 
 For setting the status code to `201` instead of the default `200`, call
-`res.statusCode(201)` in the route handler before you send the response.
+`res.status(201)` in the route handler before you send the response.
 
 - Status Code: 201
 - Headers:
