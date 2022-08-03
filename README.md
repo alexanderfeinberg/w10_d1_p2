@@ -2,9 +2,6 @@
 
 In this practice, you will create an Express server with basic Express routes.
 
-You will be focusing on the routing, so when needed seed data and other code 
-will be provided (phase 2).
-
 Follow the steps outlined below to complete both phases:
 
 * Handle JSON In Request (Basic)
@@ -26,9 +23,9 @@ functions in the route handlers that you will create later in this practice
 
 ## Basic Phase 1: Handle JSON In Request
 
-In this phase, you will enhance the Express server that you set up in Phase 1
-to take it from a plain-text server to an API server which can send and receive
-JSON-formatted content.
+In this phase, you will enhance the Express server that you set up in a previous
+practice to take it from a plain-text server to an API server which can send and
+receive JSON-formatted content.
 
 ### Parse the JSON body of a request
 
