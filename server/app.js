@@ -31,23 +31,23 @@ app.use((req, res, next) =>{
 
 // Your code here
 app.get("/artists", (req, res)=>{
-  res.send(getAllArtists())
+  res.json(getAllArtists())
 })
 
 app.post('/artists', (req, res)=>{
   const added = addArtist(req.body)
   res.status(201)
-  res.send(added)
+  res.json(added)
 
 
 })
 
 app.get('/artists/latest', (req, res)=>{
-  res.send(getLatestArtist())
+  res.json(getLatestArtist())
 })
 
 app.get('/artists/latest/albums', (req, res)=>{
-  res.send(getAlbumsForLatestArtist())
+  res.json(getAlbumsForLatestArtist())
 })
 
 const port = 5000;
